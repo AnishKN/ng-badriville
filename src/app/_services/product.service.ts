@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { AngularFireStorage } from '@angular/fire/storage';
 
 import { Observable } from 'rxjs';
-import { HomeSlider } from '../_models/home_slider';
+import { Activity } from '../_models/activity';
 
 export interface FilesUploadMetadata {
     uploadProgress$: Observable<number>;
@@ -14,15 +13,20 @@ export interface FilesUploadMetadata {
     providedIn: 'root'
 })
 
-export class HomeSliderService {
-    private dbhomeSlider = '/home-slider';
+export class ProductService {
+    private dbOtherProduct = '/other-product';
+    private dbSpecialProduct = '/special-product';
 
     constructor(
         private db: AngularFireDatabase
-    ) {
+    ) { }
+
+
+    getProduct(): AngularFireList<Activity> {
+        return this.db.list(this.dbOtherProduct);
     }
 
-    getFiles(): AngularFireList<HomeSlider> {
-        return this.db.list(this.dbhomeSlider);
+    getSpecialProduct(): AngularFireList<Activity> {
+        return this.db.list(this.dbSpecialProduct);
     }
 }

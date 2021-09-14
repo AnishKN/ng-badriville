@@ -24,4 +24,3 @@
          });
      }, 5000); // change the start delay
  });
- 

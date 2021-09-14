@@ -20,8 +20,6 @@ export class HomeComponent implements OnInit {
     this.loadAllSliderImage();
   }
 
-  displayedColumns: string[] = ['name', 'action'];
-
   loadAllSliderImage(): void {
     this.homeSliderService.getFiles().snapshotChanges().pipe(
       map(changes =>
@@ -32,7 +30,6 @@ export class HomeComponent implements OnInit {
       )
     ).subscribe(sliderList => {
       this.sliderList = sliderList;
-      console.log(this.sliderList);
     });
   }
 
