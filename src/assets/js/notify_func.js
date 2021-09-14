@@ -4,7 +4,7 @@
              // options
              icon: '',
              title: "<a href=\"single_tour.html\" target=\"_blank\"><h4>Last booking</h4>",
-             message: "<figure><img src=\"./img/notify_img.jpg\"></figure><p>Badriville Homestay and Resorts.!</a> "
+             message: "<figure><img src=\"../../assets/img/notify_img.jpg\"></figure><p>Badriville Homestay and Resorts.!</a> "
          }, {
              // settings
              icon_type: 'image',
@@ -24,3 +24,4 @@
          });
      }, 5000); // change the start delay
  });
+ 
