@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ActivityService } from 'src/app/_services/activity.service';
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -7,9 +10,30 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class ActivityComponent implements OnInit {
 
-  constructor() { }
+  sliderList?: any[];
+
+  constructor(
+    private activityService: ActivityService
+  ) {
+  }
 
   ngOnInit(): void {
+    // get all activity data
+    this.loadAllActivity();
+  }
+
+  loadAllActivity(): void {
+    this.activityService.getFiles().snapshotChanges().pipe(
+      map(changes =>
+        // store the key
+        changes.map(c => ({
+          key: c.payload.key, ...c.payload.val()
+        }))
+      )
+    ).subscribe(sliderList => {
+      this.sliderList = sliderList;
+      console.log(this.sliderList);
+    });
   }
 
 
@@ -136,12 +160,12 @@ export class ActivityComponent implements OnInit {
     responsive: {
       0: {
         items: 1,
-        dots:true,
+        dots: true,
         nav: false
       },
       400: {
         items: 1,
-        dots:true,
+        dots: true,
         nav: false
       },
       740: {

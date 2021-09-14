@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ProductService } from 'src/app/_services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -8,10 +11,30 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  productList?: any[];
+
+  constructor(
+    private productService: ProductService
+  ) {
+  }
 
   ngOnInit(): void {
+    this.loadAllProduct();
   }
+
+  loadAllProduct(): void {
+    this.productService.getProduct().snapshotChanges().pipe(
+      map(changes =>
+        // store the key
+        changes.map(c => ({
+          key: c.payload.key, ...c.payload.val()
+        }))
+      )
+    ).subscribe(res => {
+      this.productList = res;
+    });
+  }
+
   products: OwlOptions = {
     loop: false,
     mouseDrag: true,
@@ -23,12 +46,12 @@ export class ProductComponent implements OnInit {
     responsive: {
       0: {
         items: 1,
-        dots:true,
+        dots: true,
         nav: false
       },
       400: {
         items: 2,
-        dots:true,
+        dots: true,
         nav: false
       },
       740: {

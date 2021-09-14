@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { CardService } from 'src/app/_services/card.service';
 
 @Component({
   selector: 'app-homestay',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomestayComponent implements OnInit {
 
-  constructor() { }
+  homeStayList?: any[];
 
-  ngOnInit(): void {
+  constructor(
+    private cardService: CardService
+  ) {
   }
 
+  ngOnInit(): void {
+    //get all homestay data
+    this.loadAllHomestayData();
+  }
+
+  loadAllHomestayData(): void {
+    this.cardService.getHomestayData().snapshotChanges().pipe(
+      map(changes =>
+        // store the key
+        changes.map(c => ({
+          key: c.payload.key, ...c.payload.val()
+        }))
+      )
+    ).subscribe(res => {
+      this.homeStayList = res;
+      console.log(this.homeStayList);
+    });
+  }
 }
