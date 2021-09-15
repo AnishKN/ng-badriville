@@ -32,6 +32,8 @@ export class ProductComponent implements OnInit {
       )
     ).subscribe(res => {
       this.productList = res;
+      console.log("productList array");
+      console.log(this.productList);
     });
   }
 

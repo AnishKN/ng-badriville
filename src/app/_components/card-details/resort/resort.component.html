@@ -20,18 +20,15 @@
                     class="img-fluid resort-slides resort-slides-hidden more-img"
                     style="border-radius: 7px; width: 100%;">
 
-            </a>
+            </a> 
         </div>
         <div class="col-sm-12 col-md-6" id="padding-left">
             <h3 class="desktop-title"><span>Badriville Resort</span></h3>
             <p>
                 Badriville Resort and Nature Camp - Badrinath
-
+                
             </p>
-            <ul class="list_order">
-                <li><span>1</span>We provide Luxury stay</li>
-                <li><span>2</span>Every room is equipped with a private balcony with the view of Badrinath</li>
-                <li><span>3</span>The delicious homemade meal </li>
+            <ul class="list_order" *ngFor="let item of resortStayList" [innerHTML]="item.description">
             </ul>
             <button class="btn_1 mx-2" onclick="document.location='resorts.html'" type="submit">More details</button>
             <button class="btn_1 mx-2" type="submit" onclick="document.location= 'contact_us.html'">Contact

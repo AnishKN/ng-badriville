@@ -31,6 +31,7 @@ export class ResortComponent implements OnInit {
       )
     ).subscribe(res => {
       this.resortStayList = res;
+      console.log("resort");
       console.log(this.resortStayList);
     });
   }

@@ -31,6 +31,7 @@ export class HomestayComponent implements OnInit {
       )
     ).subscribe(res => {
       this.homeStayList = res;
+      console.log("home-stay");
       console.log(this.homeStayList);
     });
   }
