@@ -30,6 +30,8 @@ export class OtherProductComponent implements OnInit {
       )
     ).subscribe(res => {
       this.spacilaProductList = res;
+      console.log("other-products");
+      console.log(this.spacilaProductList);
     });
   }
 

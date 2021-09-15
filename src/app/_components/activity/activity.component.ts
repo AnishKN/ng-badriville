@@ -32,10 +32,47 @@ export class ActivityComponent implements OnInit {
       )
     ).subscribe(sliderList => {
       this.sliderList = sliderList;
+      console.log("activity");
       console.log(this.sliderList);
     });
   }
-
+  testarr:any=[{
+    banclass:"yellow_color",
+    bantext: "Chardham"
+  },
+  {
+    banclass:"yellow_color",
+    bantext: "Road Trip"
+  },
+  {
+    banclass:"green_color",
+    bantext: "Relax"
+  },
+  {
+    banclass:"green_color",
+    bantext: "Explore"
+  },
+  {
+    banclass:"green_color",
+    bantext: "Discover"
+  },
+  {
+    banclass:"red_color",
+    bantext: "Heritage"
+  },
+  {
+    banclass:"purple_color",
+    bantext: "Expedition"
+  },
+  {
+    banclass:"orange_color",
+    bantext: "Cycling"
+  },
+  {
+    banclass:"blue_color",
+    bantext: "Rent"
+  }
+]
 
   cardArray: any = [{
     banclass: "yellow_color",

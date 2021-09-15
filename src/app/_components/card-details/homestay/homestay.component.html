@@ -28,14 +28,7 @@
                     <p>
                         Badriville Homestay - Joshimath
                     </p>
-                    <ul class="list_order" *ngFor="let item of homeStayList">
-                        <li><span>1</span> Our solar panel and invertor helps you to get 24X7 Power Supply
-                        </li>
-                        <li><span>2</span> We know you love your vehicle a lot, hence we have dedicated parking for your
-                            vehicle
-                        </li>
-                        <li><span>3</span> Approved by Department Of Tourism, Govt of Uttarakhand
-                        </li>
+                    <ul class="list_order" *ngFor="let item of homeStayList" [innerHTML]="item.description">
                     </ul>
                     <button class="btn_1 mx-2" onclick="document.location='homestay.html'" type="submit">More
                         details</button>
