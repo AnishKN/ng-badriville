@@ -9658,4 +9658,13 @@ owl-carousel-o .owl-prev, owl-carousel-o .owl-next{
  owl-carousel-o .owl-prev:hover, owl-carousel-o .owl-next:hover{
      background:none !important;
  }
+.speacial-product-img{
+    height: 100% !important;
+}
+.mt-remove{
+    margin-top:1px !important;
+}
+.list_order li{
+    padding-left: 5px !important;
+}
 
