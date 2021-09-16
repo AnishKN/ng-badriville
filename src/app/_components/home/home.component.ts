@@ -35,6 +35,6 @@ export class HomeComponent implements OnInit {
     });
   }
   List:any=[{
-
+    image:"../../../assets/img/slides/home_slider_1.jpg"
   }]
 }

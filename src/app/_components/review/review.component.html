@@ -9,55 +9,54 @@
             <div class="col-md-12">
                 <div id="blogCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li *ngFor="let dot of reviewList;let i=index;" data-target="#blogCarousel"
-                            data-slide-to="2" class="active" style="
+                        <li *ngFor="let dot of reviewList;first as isFirst;let i = index" [class.active]="isFirst"
+                            data-target="#blogCarousel" attr.data-slide-to="{{i}}" class="" style="
                         border: 3px solid #888;
                         border-radius: 50%;
                         width: 12px;
                         height: 12px;"></li>
-                    </ol> 
-               
+                    </ol>
+
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                        <div *ngFor="let item of reviewList">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-2 col-sm-0">
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-12">
-                                        <div class="review_strip">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="row review-flag">
-                                                        <img src="{{item.flag}}" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <div class="row">
-                                                        <h4>{{item.name}}</h4>
-                                                        <span><i>{{item.place}}</i></span>
-                                                    </div>
+
+                        <div [class.active]="isFirst" *ngFor="let item of reviewList;first as isFirst"
+                            class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-0">
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-12">
+                                    <div class="review_strip">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row review-flag">
+                                                    <img src="{{item.flag}}" />
                                                 </div>
                                             </div>
-                                            <p>
-                                                <b>"</b>
-                                                {{item.description}}
-                                                <b>"</b>
-                                            </p>
-                                            <div class="rating">
-                                                <img src="../../../assets/img/review/ink-pen.jpg"
-                                                    class="ink-pen ink-anime">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <h4>{{item.name}}</h4>
+                                                    <span><i>{{item.place}}</i></span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- End review strip -->
+                                        <p>
+                                            <b>"</b>
+                                            {{item.description}}
+                                            <b>"</b>
+                                        </p>
+                                        <div class="rating">
+                                            <img src="../../../assets/img/review/ink-pen.jpg" class="ink-pen ink-anime">
+                                        </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-0">
-                                    </div>
+
                                 </div>
-                                <!--.row-->
+                                <div class="col-lg-2 col-md-2 col-sm-0">
+                                </div>
                             </div>
-                            <!--.item-->
+                            <!--.row-->
                         </div>
+                        <!--.item-->
                     </div>
                     <!--.carousel-inner-->
                 </div>

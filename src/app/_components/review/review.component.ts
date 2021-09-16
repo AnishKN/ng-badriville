@@ -30,10 +30,9 @@ export class ReviewComponent implements OnInit {
       )
     ).subscribe(res => {
       this.reviewList = res;
-      console.log("review list");
-      console.log(this.reviewList);
     });
   }
+  
 
 
 }
