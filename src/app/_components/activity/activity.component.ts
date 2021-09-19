@@ -96,10 +96,14 @@ export class ActivityComponent implements OnInit {
         nav: false
       },
       740: {
-        items: 2
+        items: 1,
+        dots: true,
+        nav: false
       },
       940: {
-        items: 2
+        items: 1,
+        dots: true,
+        nav: false
       }
     },
     nav: true
