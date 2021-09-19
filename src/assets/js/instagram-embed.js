@@ -1,3 +1,4 @@
+
 var ApplicationTagEmbed = ApplicationTagEmbed || function (w, u) {
     var wallObject = {},
         iframeModalObject = null,

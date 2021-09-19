@@ -60,8 +60,7 @@
      *ngFor="let card of sliderList">
       <div class="tour_container">
         <div  class="ribbon_3" 
-        [class.{{banclass}}]=""
-        *ngFor="let list of testarr" ><span>{{card.banner_name}}</span></div>
+        ><span>{{card.banner_name}}</span></div>
         <div class="img_container">
           <a href="{{card.link}}">
             <img src="{{card.image}}" width="800" height="533" class="img-fluid" alt="image">

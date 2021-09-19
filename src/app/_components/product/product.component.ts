@@ -52,15 +52,19 @@ export class ProductComponent implements OnInit {
         nav: false
       },
       400: {
-        items: 2,
+        items: 1,
         dots: true,
         nav: false
       },
       740: {
-        items: 3
+        items: 1,
+        dots: true,
+        nav: false
       },
       940: {
-        items: 3
+        items: 3,
+        dots: false,
+        nav: true
       }
     },
     nav: true
