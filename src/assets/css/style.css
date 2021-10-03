@@ -3049,6 +3049,20 @@ input.qty2 {
     padding: 10px 10px 10px 10px !important;
 }
 
+.map-responsive1 {
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 35.25%;
+    position: relative;
+}
+
+.map-responsive1 iframe {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10px 10px 10px 10px !important;
+}
+
 .rating {
     font-size: 18px;
 }

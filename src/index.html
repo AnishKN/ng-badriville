@@ -43,7 +43,9 @@
   <link href="./assets/css/custom.css" rel="stylesheet">
 
   <!--Font-Awesome css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -147,20 +149,78 @@
 
   <script type="text/javascript" src="./assets/js/instagram-embed.js"></script>
 
+  <script src="./assets/js/jquery.sliderPro.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function ($) {
+      $('#Img_carousel').sliderPro({
+        width: 960,
+        height: 500,
+        fade: true,
+        arrows: true,
+        buttons: false,
+        fullScreen: false,
+        smallSize: 500,
+        startSlide: 0,
+        mediumSize: 1000,
+        largeSize: 3000,
+        thumbnailArrows: true,
+        autoplay: false
+      });
+    });
+
+  </script>
+
+  <!-- DATEPICKER  -->
   <script>
- /*   $(document).ready(function () {
-      $(".owl-carousel").owlCarousel({
-        center: true,
-        items: 1,
-        loop: true,
-        margin: 10,
-        responsive: {
-          600: {
-            items: 1
-          }
+    $(function () {
+      'use strict';
+      $('input.date-pick').daterangepicker({
+        autoUpdateInput: false,
+        opens: 'left',
+        minDate: new Date(),
+        locale: {
+          cancelLabel: 'Clear'
         }
       });
-    });*/
+      $('input.date-pick').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format(
+          'MM-DD-YY'));
+      });
+      $('input.date-pick').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+      });
+    });
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <!-- Map -->
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAUQKuq-IHkzCt4VoGq2z4XYJ_ip7ZRkws"></script>
+
+  <script src="./assets/js/infobox.js"></script>
+
+  <!-- Carousel -->
+  <script>
+    $('.carousel-thumbs-2').owlCarousel({
+      loop: false,
+      margin: 5,
+      responsiveClass: true,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4,
+          nav: false
+        }
+      }
+    });
+
   </script>
 
 </body>

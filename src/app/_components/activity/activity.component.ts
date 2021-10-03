@@ -10,7 +10,7 @@ import { ActivityService } from 'src/app/_services/activity.service';
 })
 export class ActivityComponent implements OnInit {
 
-  sliderList?: any[];
+  activityList?: any[];
 
   constructor(
     private activityService: ActivityService
@@ -30,51 +30,11 @@ export class ActivityComponent implements OnInit {
           key: c.payload.key, ...c.payload.val()
         }))
       )
-    ).subscribe(sliderList => {
-      this.sliderList = sliderList;
-      console.log("activity");
-      console.log(this.sliderList);
+    ).subscribe(activityList => {
+      this.activityList = activityList;
     });
   }
-  testarr:any=[{
-    banclass:"yellow_color",
-    bantext: "Chardham"
-  },
-  {
-    banclass:"yellow_color",
-    bantext: "Road Trip"
-  },
-  {
-    banclass:"green_color",
-    bantext: "Relax"
-  },
-  {
-    banclass:"green_color",
-    bantext: "Explore"
-  },
-  {
-    banclass:"green_color",
-    bantext: "Discover"
-  },
-  {
-    banclass:"red_color",
-    bantext: "Heritage"
-  },
-  {
-    banclass:"purple_color",
-    bantext: "Expedition"
-  },
-  {
-    banclass:"orange_color",
-    bantext: "Cycling"
-  },
-  {
-    banclass:"blue_color",
-    bantext: "Rent"
-  }
-]
 
- 
 
   activity: OwlOptions = {
     loop: false,

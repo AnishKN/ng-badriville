@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { CardService } from 'src/app/_services/card.service';
 
@@ -7,18 +7,39 @@ import { CardService } from 'src/app/_services/card.service';
   templateUrl: './resort.component.html',
   styleUrls: ['./resort.component.css']
 })
-export class ResortComponent implements OnInit {
+export class ResortComponent implements OnInit, AfterViewInit {
 
   resortStayList?: any[];
+  classHide: any;
+  count: any;
+  slides: any;
+  index = 0;
 
   constructor(
-    private cardService: CardService
+    private cardService: CardService,
+    private elementRef: ElementRef
   ) {
   }
 
   ngOnInit(): void {
     //get all resorts data
     this.loadAllResortData();
+  }
+
+  ngAfterViewInit() {
+    this.slides = this.elementRef.nativeElement.querySelector('.resort-slides')
+      .addEventListener('load',
+        this.slides = document.querySelectorAll(".resort-slides"),
+        this.classHide = "resort-slides-hidden",
+        this.count = this.slides.length,
+        this.nextSlide()
+      );
+  }
+
+  nextSlide() {
+    this.slides[(this.index++) % this.count].classList.add(this.classHide);
+    this.slides[this.index % this.count].classList.remove(this.classHide);
+    setTimeout(this.nextSlide, 3000);
   }
 
   loadAllResortData(): void {

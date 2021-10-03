@@ -3,8 +3,8 @@
          $.notify({
              // options
              icon: '',
-             title: "<a href=\"single_tour.html\" target=\"_blank\"><h4>Last booking</h4>",
-             message: "<figure><img src=\"../../assets/img/notify_img.jpg\"></figure><p>Badriville Homestay and Resorts.!</a> "
+             title: "<h4> For book contact us directly</h4>",
+             message: "<figure><img src=\"../../assets/img/notify_img.jpg\"></figure><p>Badriville Homestay and Resorts.!"
          }, {
              // settings
              icon_type: 'image',

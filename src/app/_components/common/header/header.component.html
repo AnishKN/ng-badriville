@@ -31,62 +31,70 @@
     <div class="row">
       <div class="col-3">
         <div id="logo_home">
-          <h1><a href="index.html" title="Badriville - Resort,Homestay,Nature Camp,Trekking and Touring">Badriville -
+          <h1><a routerLink="home" title="Badriville - Resort,Homestay,Nature Camp,Trekking and Touring">Badriville -
               Resort,Homestay,Nature Camp,Trekking and Touring</a></h1>
         </div>
       </div>
       <nav class="col-9">
-        <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
+        <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" routerLink=""
+          (click)="showMobileMenu()"><span>Menu
             mobile</span></a>
-        <div class="main-menu">
+        <div class="main-menu" [ngClass]="isShow ? 'show' : ''">
           <div id="header_menu">
-            <img src="../../../../assets/img/logo/logo_sticky.png" width="160" height="34" alt="Badri ville resorts" data-retina="true">
+            <img src="../../../../assets/img/logo/logo_sticky.png" width="160" height="34" alt="Badri ville resorts"
+              data-retina="true">
           </div>
           <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
-          <ul>
+          <ul class="show_normal">
             <li class="submenu">
-              <a href="index.html" class="show-submenu">Home</a>
+              <a routerLink="home" class="show-submenu">Home</a>
             </li>
             <li class="submenu">
-              <a href="javascript:void(0);" class="show-submenu">Hotels <i class="icon-down-open-mini"></i></a>
-              <ul>
-                <li><a href="resorts.html">Badriville Resort</a></li>
-                <li><a href="homestay.html">Badriville Homestay</a></li>
+              <a href="javascript:void(0);" (click)="showHotels()" class="show-submenu">Hotels <i
+                  class="icon-down-open-mini"></i></a>
+              <ul [ngClass]="isHotelShow ? 'show_normal' : ''">
+                <li><a (click)="navigateUrl('resorts')">Badriville Resort</a></li>
+                <li><a (click)="navigateUrl('homestay')">Badriville Homestay</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);" (click)="showServices()" class="show-submenu">Our Services <i
+                  class="icon-down-open-mini"></i></a>
+              <ul [ngClass]="isServiceShow ? 'show_normal' : ''">
+                <li><a (click)="navigateUrl('coming-soon')">Spiritual Tour</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Yoga Camp at Himalaya</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Village Tour</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Nature Camping</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Trekking</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Mountain Biking</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Motorcycle Tour</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Skiing</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Wildlife Safari</a></li>
+                <li><a (click)="navigateUrl('coming-soon')">Equipment Hire</a></li>
               </ul>
             </li>
             <li class="submenu">
-              <a href="javascript:void(0);" class="show-submenu">Our Services <i class="icon-down-open-mini"></i></a>
-              <ul>
-                <li><a href="spiritual_tour.html">Spiritual Tour</a></li>
-                <li><a href="yoga_camp_at_himalaya.html">Yoga Camp at Himalaya</a></li>
-                <li><a href="village_tour_stay.html">Village Tour</a></li>
-                <li><a href="nature_camping.html">Nature Camping</a></li>
-                <li><a href="trekking.html">Trekking</a></li>
-                <li><a href="mountain_biking.html">Mountain Biking</a></li>
-                <li><a href="motor_cycle_tour.html">Motorcycle Tour</a></li>
-                <li><a href="skiing.html">Skiing</a></li>
-                <li><a href="wildlife_safari.html">Wildlife Safari</a></li>
-                <li><a href="equipiment_hire.html">Equipment Hire</a></li>
-              </ul>
+              <a routerLink="" (click)="navigateUrl('coming-soon')" class="show-submenu">About Us</a>
             </li>
             <li class="submenu">
-              <a href="about_us.html" class="show-submenu">About Us</a>
-            </li>
-            <li class="submenu">
-              <a href="contact_us.html" class="show-submenu">Contact Us</a>
+              <a (click)="navigateUrl('contact-us')" routerLink="" class="show-submenu">Contact Us</a>
             </li>
             <li class="submenu fadeimg">
               <div id="fadeshow">
                 <div class="social-icon">
-                  <img src="../../../../assets/img/logo/kubera2.png" class="visible-img" width="80" height="60" alt="Badri ville resorts"
-                    data-retina="true" style="border-radius: 10px;">
+                  <img src="../../../../assets/img/logo/kubera2.png" class="visible-img" width="80" height="60"
+                    alt="Badri ville resorts" data-retina="true" style="border-radius: 10px;">
                   <img class="normal-social" src="https://img.icons8.com/material-rounded/25/ffffff/facebook-f--v2.png"
-                    style="padding-right:10px">
-                  <img class="normal-social" src="https://img.icons8.com/ios/25/ffffff/instagram-new--v1.png" />
+                    style="padding-right:10px"
+                    (click)="socialMediaRoute('https://www.facebook.com/Badriville-Homestay-284952892041524')">
+                  <img class="normal-social" src="https://img.icons8.com/ios/25/ffffff/instagram-new--v1.png"
+                    (click)="socialMediaRoute('https://www.instagram.com/badriville')" />
                   <img class="sticky-social" src="https://img.icons8.com/material-rounded/25/000000/facebook-f--v2.png"
-                    style="padding-right:10px">
+                    style="padding-right:10px"
+                    (click)="socialMediaRoute('https://www.facebook.com/Badriville-Homestay-284952892041524')">
                   <img class="sticky-social"
-                    src="https://img.icons8.com/material-outlined/25/000000/instagram-new--v2.png" />
+                    src="https://img.icons8.com/material-outlined/25/000000/instagram-new--v2.png"
+                    (click)="socialMediaRoute('https://www.instagram.com/badriville')" />
                 </div>
               </div>
             </li>

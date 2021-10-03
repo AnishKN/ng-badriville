@@ -20,6 +20,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SliderComponent } from './_components/slider/slider.component';
+import { ToastrModule } from 'ngx-toastr';
+import { ComingSoonComponent } from './_components/coming-soon/coming-soon.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ProductComponent,
     OtherProductComponent,
     ReviewComponent,
-    AddressComponent
+    AddressComponent,
+    SliderComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,12 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    CarouselModule
+    CarouselModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

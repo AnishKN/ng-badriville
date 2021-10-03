@@ -30,8 +30,6 @@ export class HomeComponent implements OnInit {
       )
     ).subscribe(sliderList => {
       this.sliderList = sliderList;
-      console.log("slider-array");
-      console.log(this.sliderList);
     });
   }
   List:any=[{

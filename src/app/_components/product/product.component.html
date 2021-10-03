@@ -1,139 +1,85 @@
-
 <div class="container">
-    <div class="main_title">
-        <h2>Other<span> Badriville Products</span></h2>
-        <p>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</p>
-    </div>
+  <div class="main_title">
+    <h2>Other<span> Badriville Products</span></h2>
 
-    <div class="container ">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="shop-section">
-                    <!--start of row-->
-                    <div class="row">
-                        <!--start of container-->
-                        <div class="container">
-                            <div
-                                class="owl-carousel owl-theme owl-carousel-product list_carousel add_bottom_30 owl-loaded owl-drag">
-                                <owl-carousel-o [options]="products">
-                                    <ng-template carouselSlide *ngFor="let item of productList">
-                                        <div class="shop-item col-lg-12 col-md-12 col-sm-12">
-                                            <div class="inner-box">
-                                                <div class="image-box">
-                                                    <figure class="image">
-                                                     <a href="#"><img
-                                                                src="{{item.url}}"
-                                                                alt="">
-                                                        </a>
-                                                    </figure>
-                                                    <div class="item-options clearfix">
-                                                        <a href="#" class="btn_shop"><span class="icon-basket"></span>
-                                                            <div class="tool-tip">
-                                                                Add to cart
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="btn_shop"><span class="icon-heart-8"></span>
-                                                            <div class="tool-tip">
-                                                                Add to Fav
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="btn_shop"><span class="icon-eye"></span>
-                                                            <div class="tool-tip">
-                                                                View
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product_description">
-                                                    <div class="rating">
-                                                        <i class="icon-star voted"></i><i class="icon-star voted"></i><i
-                                                            class="icon-star voted"></i><i
-                                                            class="icon-star voted"></i><i class="icon-star-empty"></i>
-                                                    </div>
-                                                    <h3><a href="#">{{item.title}}</a></h3>
-                                                    <div class="price">
-                                                        <span class="offer">$20.00</span>{{item.price}}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--End Shop Item-->
-                                    </ng-template>
-                                 
-                                </owl-carousel-o>
-                            </div>
+  </div>
+
+  <!-- <div class="container margin_30">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="shop-section">
+          <div class="row">
+            <div class="container">
+              <div class="owl-carousel owl-theme owl-carousel-product list_carousel add_bottom_30 owl-loaded owl-drag">
+                <owl-carousel-o [options]="products">
+                  <ng-template carouselSlide *ngFor="let item of firstList">
+                    <div class="shop-item col-lg-12 col-md-12 col-sm-12">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <figure class="image">
+                            <a href="#"><img src="{{item.url}}" alt="">
+                            </a>
+                          </figure>
                         </div>
-                        <!--end of container-->
-                    </div>
-                    <!--end of row-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container margin_30">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="shop-section">
-                    <!--start of row-->
-                    <div class="row">
-                        <!--start of container-->
-                        <div class="container">
-                            <div
-                                class="owl-carousel owl-theme owl-carousel-product list_carousel add_bottom_30 owl-loaded owl-drag">
-                                <owl-carousel-o [options]="products">
-                                    <ng-template carouselSlide *ngFor="let item of productList">
-                                        <div class="shop-item col-lg-12 col-md-12 col-sm-12">
-                                            <div class="inner-box">
-                                                <div class="image-box">
-                                                    <figure class="image">
-                                                     <a href="#"><img
-                                                                src="{{item.url}}"
-                                                                alt="">
-                                                        </a>
-                                                    </figure>
-                                                    <div class="item-options clearfix">
-                                                        <a href="#" class="btn_shop"><span class="icon-basket"></span>
-                                                            <div class="tool-tip">
-                                                                Add to cart
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="btn_shop"><span class="icon-heart-8"></span>
-                                                            <div class="tool-tip">
-                                                                Add to Fav
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="btn_shop"><span class="icon-eye"></span>
-                                                            <div class="tool-tip">
-                                                                View
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product_description">
-                                                    <div class="rating">
-                                                        <i class="icon-star voted"></i><i class="icon-star voted"></i><i
-                                                            class="icon-star voted"></i><i
-                                                            class="icon-star voted"></i><i class="icon-star-empty"></i>
-                                                    </div>
-                                                    <h3><a href="#">{{item.title}}</a></h3>
-                                                    <div class="price">
-                                                        <span class="offer">$20.00</span>{{item.price}}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--End Shop Item-->
-                                    </ng-template>
-                                </owl-carousel-o>
-                            </div>
+                        <div class="product_description">
+                          <div class="rating">
+                            <i class="icon-star voted"></i><i class="icon-star voted"></i><i
+                              class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star-empty"></i>
+                          </div>
+                          <h3><a href="#">{{item.title}}</a></h3>
+                          <div class="price">
+                            <span class="offer"></span>₹{{item.price}}
+                          </div>
                         </div>
-                        <!--end of container-->
+                      </div>
                     </div>
-                    <!--end of row-->
-                </div>
+                  </ng-template>
+                </owl-carousel-o>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div> -->
+
+  <div class="container margin_30">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="shop-section">
+          <div class="row">
+            <div class="container">
+              <div class="owl-carousel owl-theme owl-carousel-product list_carousel add_bottom_30 owl-loaded owl-drag">
+                <owl-carousel-o [options]="products">
+                  <ng-template carouselSlide *ngFor="let item of productList">
+                    <div class="shop-item col-lg-12 col-md-12 col-sm-12">
+                      <div class="inner-box">
+                        <div class="image-box">
+                          <figure class="image">
+                            <a href="#"><img src="{{item.url}}" alt="">
+                            </a>
+                          </figure>
+                        </div>
+                        <div class="product_description">
+                          <!-- <div class="rating">
+                            <i class="icon-star voted"></i><i class="icon-star voted"></i><i
+                              class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star-empty"></i>
+                          </div> -->
+                          <h3><a href="#">{{item.title}}</a></h3>
+                          <div class="price">
+                            <span class="offer"></span>₹{{item.price}}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                </owl-carousel-o>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -12,7 +12,8 @@ import { ProductService } from 'src/app/_services/product.service';
 export class ProductComponent implements OnInit {
 
   productList?: any[];
-
+  firstList?: any [];
+  secondList?: any [];
   constructor(
     private productService: ProductService
   ) {
@@ -32,8 +33,6 @@ export class ProductComponent implements OnInit {
       )
     ).subscribe(res => {
       this.productList = res;
-      console.log("productList array");
-      console.log(this.productList);
     });
   }
 

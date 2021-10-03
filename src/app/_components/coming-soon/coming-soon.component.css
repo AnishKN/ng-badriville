@@ -1,0 +1,27 @@
+.bg-img {
+  background-image: url('../../../assets/img/header_bg.jpg');
+}
+
+.intro_title {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  height: 100% !important;
+}
+
+.center {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+}
+
+.text-align {
+  position: absolute;
+  top: 50%;
+}
+
+.img-align {
+    position: absolute;
+    top: 35%;
+  }
+  
