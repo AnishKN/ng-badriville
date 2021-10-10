@@ -1,94 +1,95 @@
 <div class="white_bg">
-<div class="container margin_60 home-sm-feature">
+  <div class="container margin_60 home-sm-feature">
 
-  <div class="main_title">
-    <h2><span>We </span>also Provide</h2>
-    <p>Get the complete experience at Himalayas</p>
-  </div>
-
-  <div class="activity-mobile-view test owl-carousel owl-theme list_carousel add_bottom_30">
-    <owl-carousel-o [options]="activity">
-      <ng-template carouselSlide *ngFor="let card of activityList">
-        <div class="item">
-          <div class="tour_container">
-            <div class="ribbon_3 {{card.banner_color}}"><span>{{card.banner_name}}</span></div>
-            <div class="img_container">
-              <a href="#">
-                <img src="{{card.image}}" width="800" height="533" class="img-fluid" alt="image">
-                <div class="short_info">
-                  <i class="icon-location"></i>{{card.location}}<span class="price">
-                    <img src="../../../assets/img/logo/Badriville2.png" class="activity-logo" alt="Badri ville resorts">
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div class="tour_title">
-              <a href="#">
-                <h3><strong>{{card.title}}</strong></h3>
-                <div class="rating">
-                  <button class="btn_2">More details</button>
-                </div>
-                <!-- end rating -->
-                <div class="clip-art">
-                  <img src="{{card.icon}}" alt="Badriville">
-                </div>
-                <!-- End wish list-->
-              </a>
-            </div>
-          </div>
-          <!-- End box tour -->
-        </div>
-        <!-- /item -->
-
-      </ng-template>
-    </owl-carousel-o>
-  </div>
-  <hr>
-
-</div>
-
-<!-- END mobile section  -->
-
-<div class="container margin_60 home-lg-feature">
-
-  <div class="main_title">
-    <h2><span>We </span>also Provide</h2>
-    <p>Get the complete experience at Himalayas</p>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.5s" *ngFor="let card of activityList">
-      <div class="tour_container">
-        <div class="ribbon_3 {{card.banner_color}}"><span>{{card.banner_name}}</span></div>
-        <div class="img_container">
-          <a href="#">
-            <img src="{{card.image}}" width="800" height="533" class="img-fluid" alt="image">
-            <div class="short_info">
-              <i class="icon-location"></i>{{card.location}}<span class="price">
-                <img src="../../../assets/img/logo/Badriville2.png" class="activity-logo" alt="Badri ville resorts">
-              </span>
-            </div>
-          </a>
-        </div>
-        <div class="tour_title">
-          <a href="#">
-            <h3><strong>{{card.title}}</strong></h3>
-            <div class="rating">
-              <button class="btn_2">More details</button>
-            </div>
-            <!-- end rating -->
-            <div class="clip-art">
-              <img src="{{card.icon}}" alt="Badriville">
-            </div>
-            <!-- End wish list-->
-          </a>
-        </div>
-      </div>
-      <!-- End box tour -->
+    <div class="main_title">
+      <h2><span>We </span>also Provide</h2>
+      <p>Get the complete experience at Himalayas</p>
     </div>
-    <!-- End col -->
+
+    <div class="activity-mobile-view test owl-carousel owl-theme list_carousel add_bottom_30">
+      <owl-carousel-o [options]="activity">
+        <ng-template carouselSlide *ngFor="let card of activityList">
+          <div class="item">
+            <div class="tour_container">
+              <div class="ribbon_3 {{card.banner_color}}"><span>{{card.banner_name}}</span></div>
+              <div class="img_container">
+                <a href="#">
+                  <img src="{{card.image}}" width="800" height="533" class="img-fluid" alt="image">
+                  <div class="short_info">
+                    <i class="icon-location"></i>{{card.location}}<span class="price">
+                      <img src="../../../assets/img/logo/Badriville2.png" class="activity-logo"
+                        alt="Badri ville resorts">
+                    </span>
+                  </div>
+                </a>
+              </div>
+              <div class="tour_title">
+                <a href="#">
+                  <h3><strong>{{card.title}}</strong></h3>
+                  <div class="rating">
+                    <button class="btn_2">More details</button>
+                  </div>
+                  <!-- end rating -->
+                  <div class="clip-art">
+                    <img src="{{card.icon}}" alt="Badriville">
+                  </div>
+                  <!-- End wish list-->
+                </a>
+              </div>
+            </div>
+            <!-- End box tour -->
+          </div>
+          <!-- /item -->
+
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+    <hr>
+
   </div>
-  <!-- End row -->
-</div>
-<!-- End container -->
+
+  <!-- END mobile section  -->
+
+  <div class="container margin_60 home-lg-feature">
+
+    <div class="main_title">
+      <h2><span>We </span>also Provide</h2>
+      <p>Get the complete experience at Himalayas</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.5s" *ngFor="let card of activityList">
+        <div class="tour_container">
+          <div class="ribbon_3 {{card.banner_color}}"><span>{{card.banner_name}}</span></div>
+          <div class="img_container">
+            <a (click)="navigateUrl('coming-soon')">
+              <img src="{{card.image}}" width="800" height="533" class="img-fluid" alt="image">
+              <div class="short_info">
+                <i class="icon-location"></i>{{card.location}}<span class="price">
+                  <img src="../../../assets/img/logo/Badriville2.png" class="activity-logo" alt="Badri ville resorts">
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="tour_title">
+            <a (click)="navigateUrl('coming-soon')">
+              <h3><strong>{{card.title}}</strong></h3>
+              <div class="rating">
+                <button class="btn_2">More details</button>
+              </div>
+              <!-- end rating -->
+              <div class="clip-art">
+                <img src="{{card.icon}}" alt="Badriville">
+              </div>
+              <!-- End wish list-->
+            </a>
+          </div>
+        </div>
+        <!-- End box tour -->
+      </div>
+      <!-- End col -->
+    </div>
+    <!-- End row -->
+  </div>
+  <!-- End container -->
 </div>

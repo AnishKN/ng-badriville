@@ -48,33 +48,33 @@
           <ul class="show_normal">
             <li class="submenu">
               <a routerLink="home" class="show-submenu">Home</a>
-            </li>
+            </li> 
             <li class="submenu">
               <a href="javascript:void(0);" (click)="showHotels()" class="show-submenu">Hotels <i
                   class="icon-down-open-mini"></i></a>
               <ul [ngClass]="isHotelShow ? 'show_normal' : ''">
-                <li><a (click)="navigateUrl('resorts')">Badriville Resort</a></li>
-                <li><a (click)="navigateUrl('homestay')">Badriville Homestay</a></li>
+                <li><a (click)="navigateUrl('resorts')" class="mouse-pointer">Badriville Resort</a></li>
+                <li><a (click)="navigateUrl('homestay')" class="mouse-pointer">Badriville Homestay</a></li>
               </ul>
             </li>
             <li>
               <a href="javascript:void(0);" (click)="showServices()" class="show-submenu">Our Services <i
                   class="icon-down-open-mini"></i></a>
               <ul [ngClass]="isServiceShow ? 'show_normal' : ''">
-                <li><a (click)="navigateUrl('coming-soon')">Spiritual Tour</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Yoga Camp at Himalaya</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Village Tour</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Nature Camping</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Trekking</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Mountain Biking</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Motorcycle Tour</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Skiing</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Wildlife Safari</a></li>
-                <li><a (click)="navigateUrl('coming-soon')">Equipment Hire</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Spiritual Tour</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Yoga Camp at Himalaya</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Village Tour</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Nature Camping</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Trekking</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Mountain Biking</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Motorcycle Tour</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Skiing</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Wildlife Safari</a></li>
+                <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Equipment Hire</a></li>
               </ul>
             </li>
             <li class="submenu">
-              <a routerLink="" (click)="navigateUrl('coming-soon')" class="show-submenu">About Us</a>
+              <!-- <a routerLink="" (click)="navigateUrl('coming-soon')" class="show-submenu">About Us</a> -->
             </li>
             <li class="submenu">
               <a (click)="navigateUrl('contact-us')" routerLink="" class="show-submenu">Contact Us</a>

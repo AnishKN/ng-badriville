@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators';
 
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ActivityService } from 'src/app/_services/activity.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -13,7 +14,8 @@ export class ActivityComponent implements OnInit {
   activityList?: any[];
 
   constructor(
-    private activityService: ActivityService
+    private activityService: ActivityService,
+    private router: Router,
   ) {
   }
 
@@ -68,4 +70,9 @@ export class ActivityComponent implements OnInit {
     },
     nav: true
   }
+
+  navigateUrl(path) {
+    this.router.navigate([path]);
+  }
+
 }
