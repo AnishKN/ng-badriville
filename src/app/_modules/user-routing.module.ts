@@ -27,7 +27,7 @@ const routes: Routes = [
         component: BadriResortsComponent
     },
     {
-        path: 'homestay',
+        path: 'homestay', 
         component: BadriHomestayComponent
     },
     {

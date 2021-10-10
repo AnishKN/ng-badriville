@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { CardService } from 'src/app/_services/card.service';
 
@@ -17,7 +18,8 @@ export class ResortComponent implements OnInit, AfterViewInit {
 
   constructor(
     private cardService: CardService,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private router: Router,
   ) {
   }
 
@@ -54,4 +56,15 @@ export class ResortComponent implements OnInit, AfterViewInit {
       this.resortStayList = res;
     });
   }
+
+
+  resorts() {
+    this.router.navigate(['resorts']);
+  }
+
+  contactUs() {
+    this.router.navigate(['contact-us']);
+  }
+
+
 }

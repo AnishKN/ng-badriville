@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
   loadAllProduct(): void {
     this.productService.getProduct().snapshotChanges().pipe(
       map(changes =>
-        // store the key
+        // store the key   
         changes.map(c => ({
           key: c.payload.key, ...c.payload.val()
         }))

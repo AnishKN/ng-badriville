@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { CardService } from 'src/app/_services/card.service';
 
@@ -17,7 +18,8 @@ export class HomestayComponent implements OnInit {
 
   constructor(
     private cardService: CardService,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private router: Router,
   ) {
   }
 
@@ -56,10 +58,10 @@ export class HomestayComponent implements OnInit {
   }
 
   homestay() {
-
+    this.router.navigate(['homestay']);
   }
 
   contactUs() {
-
+    this.router.navigate(['contact-us']);
   }
 }

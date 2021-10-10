@@ -1,10 +1,11 @@
-<div class="container">
-  <div class="main_title">
-    <h2>Other<span> Badriville Products</span></h2>
+<div class="white_bg">
+  <div class="container">
+    <div class="main_title">
+      <h2>Other<span> Badriville Products</span></h2>
 
-  </div>
+    </div>
 
-  <!-- <div class="container margin_30">
+    <!-- <div class="container margin_30">
     <div class="row">
       <div class="col-lg-12">
         <div class="shop-section">
@@ -43,43 +44,45 @@
     </div>
   </div> -->
 
-  <div class="container margin_30">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="shop-section">
-          <div class="row">
-            <div class="container">
-              <div class="owl-carousel owl-theme owl-carousel-product list_carousel add_bottom_30 owl-loaded owl-drag">
-                <owl-carousel-o [options]="products">
-                  <ng-template carouselSlide *ngFor="let item of productList">
-                    <div class="shop-item col-lg-12 col-md-12 col-sm-12">
-                      <div class="inner-box">
-                        <div class="image-box">
-                          <figure class="image">
-                            <a href="#"><img src="{{item.url}}" alt="">
-                            </a>
-                          </figure>
-                        </div>
-                        <div class="product_description">
-                          <!-- <div class="rating">
+    <div class="container margin_30">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="shop-section">
+            <div class="row">
+              <div class="container">
+                <div
+                  class="owl-carousel owl-theme owl-carousel-product list_carousel add_bottom_30 owl-loaded owl-drag">
+                  <owl-carousel-o [options]="products">
+                    <ng-template carouselSlide *ngFor="let item of productList">
+                      <div class="shop-item col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner-box">
+                          <div class="image-box">
+                            <figure class="image">
+                              <a href="#"><img src="{{item.url}}" alt="">
+                              </a>
+                            </figure>
+                          </div>
+                          <div class="product_description">
+                            <!-- <div class="rating">
                             <i class="icon-star voted"></i><i class="icon-star voted"></i><i
                               class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star-empty"></i>
                           </div> -->
-                          <h3><a href="#">{{item.title}}</a></h3>
-                          <div class="price">
-                            <span class="offer"></span>₹{{item.price}}
+                            <h3><a href="#">{{item.title}}</a></h3>
+                            <div class="price">
+                              <!-- <span class="offer"></span>₹{{item.price}} -->
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </ng-template>
-                </owl-carousel-o>
+                    </ng-template>
+                  </owl-carousel-o>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

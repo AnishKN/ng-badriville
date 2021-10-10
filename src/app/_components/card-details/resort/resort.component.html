@@ -29,9 +29,9 @@
       </p>
       <ul class="list_order" *ngFor="let item of resortStayList" [innerHTML]="item.description">
       </ul>
-      <button class="btn_1 mx-2 card-btns" >More
+      <button class="btn_1 mx-2 card-btns" (click)="resorts()">More
         details</button>
-      <button class="btn_1 mx-2 card-btns" >Contact
+      <button class="btn_1 mx-2 card-btns" (click)="contactUs()">Contact
         Us</button>
     </div>
   </div>

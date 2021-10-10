@@ -20,7 +20,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
       jsFileLocation: "revolution/js/",
       sliderLayout: "fullscreen",
       dottedOverlay: "none",
-      delay: 1000,
+      delay: 9000,
       navigation: {
         keyboardNavigation: "off",
         keyboard_direction: "horizontal",
