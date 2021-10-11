@@ -27,7 +27,8 @@
       <p>
         Badriville Resort and Nature Camp - Badrinath
       </p>
-      <ul class="list_order" *ngFor="let item of resortStayList" [innerHTML]="item.description">
+      <ul class="list_order" *ngFor="let item of resortStayList; let i=index;">
+        <li><span>{{i+1}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{item.benefits}}</li>
       </ul>
       <button class="btn_1 mx-2 card-btns" (click)="resorts()">More
         details</button>

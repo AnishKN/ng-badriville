@@ -22,7 +22,8 @@
     <div class="col-sm-12 col-md-6 padding-left" id="more-padding">
       <h3 class="desktop-title  mt-remove"><span class="caps-title">Badriville Homestay</span></h3>
       <p> Badriville Homestay - Joshimath </p>
-      <ul class="list_order" *ngFor="let item of homeStayList" [innerHTML]="item.description">
+      <ul class="list_order" *ngFor="let item of homeStayList; let i=index;">
+        <li><span>{{i+1}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{item.benefits}}</li>
       </ul>
       <button class="btn_1 mx-2 card-btns" (click)="homestay()">
         More details</button>
