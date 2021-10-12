@@ -9,9 +9,23 @@ declare var $;
 export class SliderComponent implements OnInit, AfterViewInit {
 
   constructor(
-  ) { }
+  ) {
+    
+  }
   ngOnInit(): void {
-
+    const ScreenWidth = window.screen.availWidth;
+    if(ScreenWidth<400){
+      $(".mbl-slider").attr("data-scalestart", "200");
+      $(".mbl-slider").attr("data-scaleend", "320");
+    }
+    if(ScreenWidth<600){
+      $(".mbl-slider").attr("data-scalestart", "200");
+      $(".mbl-slider").attr("data-scaleend", "300");
+    }
+    if(ScreenWidth<800){
+      $(".mbl-slider").attr("data-scalestart", "200");
+      $(".mbl-slider").attr("data-scaleend", "300");
+    }
   }
 
   ngAfterViewInit() {
@@ -69,5 +83,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
 
 }
