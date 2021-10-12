@@ -58,7 +58,7 @@
               </ul>
             </li>
             <li>
-              <a href="javascript:void(0);" (click)="showServices()" class="show-submenu">Our Services <i
+              <a href="javascript:void(0);"  (click)="toactivities()" [routerLink]="['./services']" routerLinkActive="router-link-active" class="show-submenu">Our Services <i
                   class="icon-down-open-mini"></i></a>
               <ul [ngClass]="isServiceShow ? 'show_normal' : ''">
                 <li><a (click)="navigateUrl('coming-soon')" class="mouse-pointer">Spiritual Tour</a></li>
@@ -77,7 +77,8 @@
               <!-- <a routerLink="" (click)="navigateUrl('coming-soon')" class="show-submenu">About Us</a> -->
             </li>
             <li class="submenu">
-              <a (click)="navigateUrl('contact-us')" routerLink="" class="show-submenu">Contact Us</a>
+              <!-- (click)="navigateUrl('contact-us')" routerLink="" -->
+              <a class="show-submenu" (click)="tofooter()" [routerLink]="['../footer/footer.component.html']" routerLinkActive="router-link-active" >Contact Us</a>
             </li>
             <li class="submenu fadeimg">
               <div id="fadeshow">

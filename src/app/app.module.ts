@@ -54,6 +54,7 @@ import { ComingSoonComponent } from './_components/coming-soon/coming-soon.compo
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }), // ToastrModule added
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

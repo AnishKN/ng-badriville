@@ -1,6 +1,30 @@
 
 /* START change image every second */
+    
+addEventListener("load", () => { // "load" is safe but "DOMContentLoaded" starts earlier
+    var index = 0;
+    const slides = document.querySelectorAll(".resort-slides");
+    const classHide = "resort-slides-hidden", count = slides.length;
+    nextSlide();
+    function nextSlide() {
+        slides[(index++) % count].classList.add(classHide);
+        slides[index % count].classList.remove(classHide);
+        setTimeout(nextSlide, 3000);
+    }
+});
 
+addEventListener("load", () => { // "load" is safe but "DOMContentLoaded" starts earlier
+    var index = 0;
+    const slides = document.querySelectorAll(".homestay-slides");
+    const classHide = "homestay-slides-hidden", count = slides.length;
+    nextSlide();
+    function nextSlide() {
+        slides[(index++) % count].classList.add(classHide);
+        slides[index % count].classList.remove(classHide);
+        setTimeout(nextSlide, 5000);
+       
+    }
+});
 
 /* END change image every second */
 
@@ -15,29 +39,7 @@ $('#blogCarousel').carousel({
     interval: 10000
 });
 
-// home slider
 
-// $(function(){
-//    var value1 = function(){
-//        var w = $(window).width();
-//        return w < 400 ? 200 : 100;
-//    };
-
-//    $(window).resize(function(){
-//        $('.mbl-slider').attr('data-scalestart', value1);
-//    }).resize(); // <-----------fires when dom is ready.
-// });
-
-// $(function(){
-//    var value2 = function(){
-//        var w = $(window).width();
-//        return w < 400 ? 300 : 150;
-//    };
-
-//    $(window).resize(function(){
-//        $('.mbl-slider').attr('data-scaleend', value2);
-//    }).resize(); // <-----------fires when dom is ready.
-// });
                         
 
 

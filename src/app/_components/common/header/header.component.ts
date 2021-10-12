@@ -39,4 +39,10 @@ export class HeaderComponent implements OnInit {
     this.isShow = !this.isShow;
     this.router.navigate([path]);
   }
+  tofooter(){
+    document.getElementById("footerID").scrollIntoView({behavior:"smooth"});
+  }
+  toactivities(){
+    document.getElementById("activityID").scrollIntoView({behavior:"smooth"});
+  }
 }
