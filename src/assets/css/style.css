@@ -8864,6 +8864,13 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
     .owl-carousel{
         display: block !important;
     }
+    .card-btns{
+        position: static !important;
+    }
+    .btn-bottom{
+        position: relative !important;
+        margin-top: 5px !important;
+    }
 }
 
 
@@ -9320,6 +9327,13 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
     .owl-carousel{
         display: block !important;
     }
+    .card-btns{
+        position: static !important;
+    }
+    .btn-bottom{
+        position: relative !important;
+        margin-top: 5px !important;
+    }
 }
 
 
@@ -9513,6 +9527,14 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
     .owl-carousel{
         display: block !important;
     }
+    .card-btns{
+        position: static !important;
+    }
+    .btn-bottom{
+        position: relative !important;
+        margin-top: 5px !important;
+    }
+    
 }
 
 
@@ -9707,4 +9729,18 @@ owl-carousel-o .owl-prev, owl-carousel-o .owl-next{
 .caps-title{
     text-transform: uppercase;
     font-weight: 700;
+}
+
+/*botton bottom */
+
+.btn-bottom{
+    position: absolute;
+    bottom: 0;
+}
+.card-btns{
+    position: absolute ;
+    bottom: 0 ;
+}
+.card-btns:last-child{
+    left:150px;
 }

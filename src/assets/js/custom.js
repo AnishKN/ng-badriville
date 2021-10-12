@@ -15,7 +15,29 @@ $('#blogCarousel').carousel({
     interval: 10000
 });
 
+// home slider
 
+// $(function(){
+//    var value1 = function(){
+//        var w = $(window).width();
+//        return w < 400 ? 200 : 100;
+//    };
 
+//    $(window).resize(function(){
+//        $('.mbl-slider').attr('data-scalestart', value1);
+//    }).resize(); // <-----------fires when dom is ready.
+// });
+
+// $(function(){
+//    var value2 = function(){
+//        var w = $(window).width();
+//        return w < 400 ? 300 : 150;
+//    };
+
+//    $(window).resize(function(){
+//        $('.mbl-slider').attr('data-scaleend', value2);
+//    }).resize(); // <-----------fires when dom is ready.
+// });
+                        
 
 
