@@ -3,8 +3,8 @@
          $.notify({
              // options
              icon: '',
-             title: "<h4> For book contact us directly</h4>",
-             message: "<figure><img src=\"../../assets/img/notify_img.jpg\"></figure><p>Badriville Homestay and Resorts.!"
+             title: "<h4>CONTACT US</h4>",
+             message: "<figure><img src=\"../../assets/img/notify_img.jpg\"></figure><br> (+91) 9412418725 <br> vimalpanwar25@gmail.com"
          }, {
              // settings
              icon_type: 'image',
