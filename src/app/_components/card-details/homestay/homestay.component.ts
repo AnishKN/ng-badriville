@@ -8,7 +8,7 @@ import { CardService } from 'src/app/_services/card.service';
   templateUrl: './homestay.component.html',
   styleUrls: ['./homestay.component.css']
 })
-export class HomestayComponent implements OnInit {
+export class HomestayComponent implements OnInit{
 
   homeStayList?: any[];
   classHide: any;
