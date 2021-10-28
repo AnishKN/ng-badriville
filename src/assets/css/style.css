@@ -3745,7 +3745,7 @@ label.error:after {
 /*Background colors*/
 
 .white_bg {
-    background-color: #fff
+    background-color: #fff;
 }
 
 
@@ -9334,6 +9334,9 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
         position: relative !important;
         margin-top: 5px !important;
     }
+    .align-center{
+        text-align: left !important;
+    }
 }
 
 
@@ -9533,6 +9536,9 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
     .btn-bottom{
         position: relative !important;
         margin-top: 5px !important;
+    }
+    .align-center{
+        text-align: left !important;
     }
     
 }
@@ -9743,4 +9749,27 @@ owl-carousel-o .owl-prev, owl-carousel-o .owl-next{
 }
 .card-btns:last-child{
     left:150px;
+}
+.align-center{
+    text-align: center;
+}
+/* activity title colors*/
+
+.purple_color{
+    color:#7300e6;
+}
+.red_color{
+    color: #f90e12;
+}
+.yellow_color{
+    color: #a7a704 ;
+}
+.orange_color{
+    color:#ff8000 ;
+}
+.blue_color{
+    color:#0040ff ;
+}
+.green_color{
+    color:#5BC236 ;
 }
