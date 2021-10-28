@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var $;
 @Component({
@@ -8,10 +9,16 @@ declare var $;
 })
 export class SliderComponent implements OnInit, AfterViewInit {
 
-  constructor(
+  constructor(private router: Router,
   ) {
     
   }
+  isShow = false; 
+  navigateUrl(path) {
+    this.isShow = !this.isShow;
+    this.router.navigate([path]);
+  }
+
   ngOnInit(): void {
     const ScreenWidth = window.screen.availWidth;
     if(ScreenWidth<400){
@@ -27,6 +34,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
       $(".mbl-slider").attr("data-scaleend", "300");
     }
   }
+
 
   ngAfterViewInit() {
     $("#rev_slider_45_1").show().revolution({
