@@ -2,13 +2,14 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { CardService } from 'src/app/_services/card.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-homestay',
   templateUrl: './homestay.component.html',
   styleUrls: ['./homestay.component.css']
 })
-export class HomestayComponent implements OnInit{
+export class HomestayComponent implements OnInit {
 
   homeStayList?: any[];
   classHide: any;
@@ -26,22 +27,24 @@ export class HomestayComponent implements OnInit{
   ngOnInit(): void {
     //get all homestay data
     this.loadAllHomestayData();
-  }
+  } 
 
   ngAfterViewInit() {
-    this.slides = this.elementRef.nativeElement.querySelector('.homestay-slides')
-      .addEventListener('load',
-        this.slides = document.querySelectorAll(".homestay-slides"),
-        this.classHide = "homestay-slides-hidden",
-        this.count = this.slides.length,
-        this.nextSlide()
-      );
+    const obs$ = interval(5000)
+    obs$.subscribe((d) => {
+      //img transition
+      this.slides = this.elementRef.nativeElement.querySelector('.homestay-slides')
+        .addEventListener('load',
+          this.slides = document.querySelectorAll(".homestay-slides"),
+          this.classHide = "homestay-slides-hidden",
+          this.count = this.slides.length,
+          this.nextSlide()
+        );
+    })
   }
-
   nextSlide() {
     this.slides[(this.index++) % this.count].classList.add(this.classHide);
     this.slides[this.index % this.count].classList.remove(this.classHide);
-    setTimeout(this.nextSlide, 3000);
   }
 
   loadAllHomestayData(): void {
