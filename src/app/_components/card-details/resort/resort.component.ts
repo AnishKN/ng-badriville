@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { CardService } from 'src/app/_services/card.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-resort',
@@ -29,19 +30,22 @@ export class ResortComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.slides = this.elementRef.nativeElement.querySelector('.resort-slides')
-      .addEventListener('load',
-        this.slides = document.querySelectorAll(".resort-slides"),
-        this.classHide = "resort-slides-hidden",
-        this.count = this.slides.length,
-        this.nextSlide()
-      );
+    const obs$ = interval(3000)
+    obs$.subscribe((d) => {
+      //img transition
+      this.slides = this.elementRef.nativeElement.querySelector('.resort-slides')
+        .addEventListener('load',
+          this.slides = document.querySelectorAll(".resort-slides"),
+          this.classHide = "resort-slides-hidden",
+          this.count = this.slides.length,
+          this.nextSlide()
+        );
+    })
   }
 
   nextSlide() {
     this.slides[(this.index++) % this.count].classList.add(this.classHide);
     this.slides[this.index % this.count].classList.remove(this.classHide);
-    setTimeout(this.nextSlide, 3000);
   }
 
   loadAllResortData(): void {
